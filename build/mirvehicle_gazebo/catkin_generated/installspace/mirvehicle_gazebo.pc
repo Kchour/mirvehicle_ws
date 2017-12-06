@@ -1,0 +1,8 @@
+prefix=/home/jaerock/mirvehicle_ws/install
+
+Name: mirvehicle_gazebo
+Description: Description of mirvehicle_gazebo
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/jaerock/mirvehicle_ws/install/lib 
+Requires: 

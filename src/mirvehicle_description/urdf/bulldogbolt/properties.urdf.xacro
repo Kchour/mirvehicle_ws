@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"> <!-- name="properties" -->
+
+<xacro:arg name="camera_left" default="true"/>
+<xacro:arg name="camera_right" default="true"/>
+<xacro:arg name="velodyne_points" default="true"/>
+<xacro:arg name="front_laser_points" default="true"/>
+
+<xacro:property name="PI" value="3.1415926835897931"/>
+<!--  <xacro:property name="base_height" value="0"/> -->
+<xacro:property name="base_height" value="1.0639"/>
+<xacro:property name="base_mass" value="2050"/>
+<xacro:property name="base_mass_ixx" value="63"/>
+<xacro:property name="base_mass_iyy" value="1048"/>
+<xacro:property name="base_mass_izz" value="1111"/>
+<xacro:property name="base_mass_ixz" value="-31"/>
+<xacro:property name="tyre_x" value="1.31"/>
+<xacro:property name="tyre_y" value="0.765"/>
+<xacro:property name="tyre_length" value="0.229"/>
+<xacro:property name="tyre_r" value="0.66"/>
+<xacro:property name="tyre_radius" value="0.356"/>
+<xacro:property name="tyre_mass" value="40"/>
+<xacro:property name="tyre_mass_ixx" value="54"/>
+<xacro:property name="tyre_mass_iyy" value="56"/>
+<xacro:property name="tyre_mass_izz" value="104"/>
+<xacro:property name="car_height" value="1.4478"/>
+<xacro:property name="car_to_bumper" value="2.4"/>
+<xacro:property name="front_bumper_height" value="${car_height/2}"/>
+<xacro:property name="sensor_box" value="0.25"/>
+<xacro:property name="sensor_box2" value="0.31"/>
+<xacro:property name="camera_box" value="0.1"/>
+<xacro:property name="tyre_height" value="-0.696"/>
+<xacro:property name="str_length" value="0.01"/>
+<xacro:property name="str_radius" value="0.1"/>
+<xacro:property name="str_angle" value="0.6"/>
+<xacro:property name="car_width" value="1.301"/>
+<xacro:property name="front_laser_points" value="$(arg front_laser_points)"/>
+<xacro:property name="velodyne_points" value="$(arg velodyne_points)"/>
+<xacro:property name="camera_right" value="$(arg camera_right)"/>
+<xacro:property name="camera_left" value="$(arg camera_left)"/>
+<xacro:property name="tyre_origin">
+    <origin xyz="0 0 0" rpy="${PI/2} 0 0"/>
+</xacro:property>
+<xacro:property name="tyre_origin_2">
+    <origin xyz="0 0 0" rpy="0 0 ${PI/2}"/>
+</xacro:property>
+<xacro:property name="tyre_origin_3">
+    <origin xyz="0 0 0" rpy="0 0 ${-PI/2}"/>
+</xacro:property>
+
+</robot>

@@ -1,0 +1,2 @@
+mirvehicle:mirvehicle_description:mirvehicle_gazebo:obstaclestopper:sicktoolbox:sicktoolbox_wrapper
+-DCATKIN_DEVEL_PREFIX=/home/jaerock/mirvehicle_ws/devel -DCMAKE_INSTALL_PREFIX=/home/jaerock/mirvehicle_ws/install -G Unix Makefiles

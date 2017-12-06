@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- RViz -->
+  <!-- ORG node pkg="rviz" type="rviz" name="rviz_bulldogbolt" respawn="false" output="screen" args="-d $(find bulldogbolt_description)/launch/rviz.rviz" / -->
+
+  <arg name="gui" default="true" />
+  <arg name="rvizconfig" default="$(find bulldogbolt_description)/launch/rviz.rviz" />
+
+  <param name="robot_description" textfile="$(find bulldogbolt_description)/urdf/bulldogbolt_structure.urdf.xacro" />
+  <param name="use_gui" value="$(arg gui)"/>
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+
+</launch>

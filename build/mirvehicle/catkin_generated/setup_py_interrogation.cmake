@@ -1,0 +1,6 @@
+set(mirvehicle_SETUP_PY_VERSION "1.0.0")
+set(mirvehicle_SETUP_PY_SCRIPTS "")
+set(mirvehicle_SETUP_PY_PACKAGES "mirvehicle")
+set(mirvehicle_SETUP_PY_PACKAGE_DIRS "src/mirvehicle")
+set(mirvehicle_SETUP_PY_MODULES "")
+set(mirvehicle_SETUP_PY_MODULE_DIRS "")
