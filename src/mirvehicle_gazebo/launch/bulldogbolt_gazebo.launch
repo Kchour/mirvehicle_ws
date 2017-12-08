@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<launch>
+  
+<arg name="world" default="empty"/>
+
+<include file="$(find mirvehicle_gazebo)/launch/bulldogbolt_$(arg world).launch" />
+
+<!-- start gazebo client -->
+<node name="gazebo_gui" pkg="gazebo_ros" type="gzclient" respawn="false" output="screen"/>
+
+<!-- start rviz -->
+<arg name="gui" default="true" />
+<arg name="rvizconfig" default="$(find mirvehicle_gazebo)/launch/bulldogbolt_gazebo.rviz" />
+<node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+
+</launch>
