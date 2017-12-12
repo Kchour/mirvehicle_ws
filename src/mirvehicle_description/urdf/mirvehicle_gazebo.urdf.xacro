@@ -40,10 +40,10 @@ Sensors are included separately, based on the arguments passed to the xacro incl
 #
 # Author: Jaerock Kwon
 # ============================================================================
-# 12/1/2017: Change the package name to mirvehicle
-# 12/6/2017: Change kp in front_left/right_wheel_link to the same as 
-#            back_left/right_wheel_link
-#
+# 12/01/2017: Change the package name to mirvehicle
+# 12/06/2017: Change kp in front_left/right_wheel_link to the same as 
+#             back_left/right_wheel_link
+# 12/11/2017: Add proper joint names for RWD/FWD. Bulldogbolt is FWD. 
 # ============================================================================
 
 -->
@@ -72,19 +72,19 @@ Sensors are included separately, based on the arguments passed to the xacro incl
 <gazebo reference="front_right_wheel_link">
     <mu1>10000</mu1>
     <mu2>10000</mu2>
-    <kp>10000000</kp>
+    <kp>1000000</kp>
     <kd>1</kd> 
     <minDepth>0.01</minDepth>
-    <maxVel>10.0</maxVel> 
+    <maxVel>100.0</maxVel> 
 </gazebo>
 
 <gazebo reference="front_left_wheel_link">
     <mu1>10000</mu1>
     <mu2>10000</mu2>
-    <kp>10000000</kp>
+    <kp>1000000</kp>
     <kd>1</kd> 
     <minDepth>0.01</minDepth>
-    <maxVel>10.0</maxVel> 
+    <maxVel>100.0</maxVel> 
 </gazebo>
 
 <gazebo reference="front_right_steering_link">
@@ -114,7 +114,10 @@ Sensors are included separately, based on the arguments passed to the xacro incl
 
 <gazebo>
     <plugin filename="libgazebo_ros_joint_state_publisher.so" name="joint_state_publisher">
-        <jointName>back_left_wheel_joint, back_right_wheel_joint, front_left_steering_joint, front_right_steering_joint, front_right_wheel_joint, front_left_wheel_joint</jointName>
+      <!-- RWD --> 
+      <!-- jointName>back_left_wheel_joint, back_right_wheel_joint, front_left_steering_joint, front_right_steering_joint, front_right_wheel_joint, front_left_wheel_joint</jointName -->
+      <!-- FWD --> 
+      <jointName>front_left_wheel_joint, front_right_wheel_joint, front_left_steering_joint, front_right_steering_joint, front_right_wheel_joint, front_left_wheel_joint</jointName>
         <updateRate>50.0</updateRate>
         <robotNamespace>/$(arg robot_name)</robotNamespace>
         <alwaysOn>true</alwaysOn>

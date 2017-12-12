@@ -33,7 +33,7 @@
 # ============================================================================
 # 12/01/2017: Change join1 and joint2 to back_left and back_right respectively
 # 12/06/2017: Add fron_left/right_velocity_controllers
-#
+# 12/11/2017: Add RWD/FWD options
 # ============================================================================
 
 # controls the rear two tires based on individual motors
@@ -44,18 +44,20 @@
 
   # Velocity Controllers ---------------------------------------
 
+  # -- RWD --
   # The left/right rear wheels are what moves the car. This
   # controller set uses PID for velocity set points
-  # back_left_velocity_controller:
+  #back_left_velocity_controller:
   #  type: velocity_controllers/JointVelocityController
   #  joint: back_left_wheel_joint
   #  pid: {p: 100.0, i: 0.01, d: 10.0}
-  # back_right_velocity_controller:
+  #back_right_velocity_controller:
   #  type: velocity_controllers/JointVelocityController
   #  joint: back_right_wheel_joint
   #  pid: {p: 100.0, i: 0.01, d: 10.0}
 
-  # The left/right front wheels are what moves the car. This
+  # -- FWD --
+  # The left/right rear wheels are what moves the car. This
   # controller set uses PID for velocity set points
   front_left_velocity_controller:
     type: velocity_controllers/JointVelocityController

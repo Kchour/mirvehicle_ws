@@ -8,11 +8,9 @@
 
 <!-- Necessary includes -->
 <xacro:include filename="$(find mirvehicle_description)/urdf/$(arg robot_name)/structure.urdf.xacro" />
+<xacro:include filename="$(find mirvehicle_description)/urdf/mirvehicle_gazebo.urdf.xacro" />
 
 <!-- Bolt-on sensors go here -->
 <xacro:include filename="$(find mirvehicle_description)/urdf/$(arg robot_name)/sensors.urdf.xacro" />
-
-<xacro:include filename="$(find mirvehicle_description)/urdf/mirvehicle_gazebo.urdf.xacro" />
-
 
 </robot>

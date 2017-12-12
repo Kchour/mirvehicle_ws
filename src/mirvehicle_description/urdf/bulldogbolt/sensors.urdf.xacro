@@ -31,161 +31,182 @@
 </xacro:if>
 
 
-<!-- ====================================================================== -->  
-<!-- Cameras-->
+!-- ********************************************************************** -->
+<!-- ********************************************************************** -->
+<!-- Sensors -->
+<!-- ********************************************************************** -->
+<!-- ********************************************************************** -->
 
-<joint name="camera_right_joint" type="fixed">
-<origin xyz="-0.75 -${car_width/2} ${0.725 + camera_box/2 + 1.25}" rpy="0 0 -${PI/2}"/>
-	<axis xyz="0 0 1"/>
-	<parent link="base_link"/>
-	<child link="camera_right_link"/>
-</joint>
 
-<link name="camera_right_link">
-	<collision>
-	  <origin xyz="0 0 0" rpy="0 0 0"/>
-	  <geometry>
-	   <box size="${camera_box} ${camera_box} ${camera_box}"/>
-	  </geometry>
-	</collision>
-
-	<visual>
-	  <origin xyz="0 0 0" rpy="0 0 0"/>
-	  <geometry>
-	  <box size="${camera_box} ${camera_box} ${camera_box}"
-/>
-          </geometry>
-	</visual>
-
-    <inertial>
-      <mass value="1e-5" />
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
-    </inertial>
-</link>
+<!-- ********************************************************************** -->
+<!-- Left Camera-->
+<!-- ********************************************************************** -->
 
 <joint name="camera_left_joint" type="fixed">
-<origin xyz="-0.75 ${car_width/2} ${0.725 + camera_box/2 + 1.25}" rpy="0 0 ${PI/2}"/>
-	<axis xyz="0 0 1"/>
-	<parent link="base_link"/>
-	<child link="camera_left_link"/>
+    <origin xyz="-0.75 ${car_width/2} ${0.725 + camera_box/2 + 1.25}" rpy="0 0 ${PI/2}"/>
+    <axis xyz="0 0 1"/>
+    <parent link="base_link"/>
+    <child link="camera_left_link"/>
 </joint>
 
 <link name="camera_left_link">
-	<collision>
-	  <origin xyz="0 0 0" rpy="0 0 0"/>
-	  <geometry>
-	   <box size="${camera_box} ${camera_box} ${camera_box}"/>
-	  </geometry>
-	</collision>
+    <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <box size="${camera_box} ${camera_box} ${camera_box}"/>
+        </geometry>
+    </collision>
 
-	<visual>
-	  <origin xyz="0 0 0" rpy="0 0 0"/>
-	  <geometry>
-	  <box size="${camera_box} ${camera_box} ${camera_box}"
-/>
-          </geometry>
-	</visual>
+    <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <box size="${camera_box} ${camera_box} ${camera_box}"/>
+        </geometry>
+    </visual>
 
     <inertial>
-      <mass value="1e-5" />
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        <mass value="1e-5" />
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
     </inertial>
 </link>
 
 
+<!-- ********************************************************************** -->
+<!-- Right Camera-->
+<!-- ********************************************************************** -->
+
+<joint name="camera_right_joint" type="fixed">
+    <origin xyz="-0.75 -${car_width/2} ${0.725 + camera_box/2 + 1.25}" rpy="0 0 -${PI/2}"/>
+    <axis xyz="0 0 1"/>
+    <parent link="base_link"/>
+    <child link="camera_right_link"/>
+</joint>
+
+<link name="camera_right_link">
+    <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <box size="${camera_box} ${camera_box} ${camera_box}"/>
+        </geometry>
+    </collision>
+
+    <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <box size="${camera_box} ${camera_box} ${camera_box}"/>
+        </geometry>
+    </visual>
+
+    <inertial>
+        <mass value="1e-5" />
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+</link>
+
+
+<!-- ********************************************************************** -->
+<!-- Camera Joint -->
+<!-- ********************************************************************** -->
+
 <joint name="camera_joint" type="fixed">
-<origin xyz="0 0 ${0.725 + sensor_box/2 + 1.25}" rpy="0 0 0"/>
-	<axis xyz="0 0 1"/>
-	<parent link="base_link"/>
-	<child link="camera_link"/>
+    <origin xyz="0 0 ${0.725 + sensor_box/2 + 1.25}" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <parent link="base_link"/>
+    <child link="camera_link"/>
 </joint>
 
 <link name="camera_link">
-	<collision>
-	  <origin xyz="0 0 0" rpy="0 0 0"/>
-	  <geometry>
-	   <box size="${sensor_box} ${sensor_box} ${sensor_box}"/>
-	  </geometry>
-	</collision>
+    <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <box size="${sensor_box} ${sensor_box} ${sensor_box}"/>
+        </geometry>
+    </collision>
 
-	<visual>
-	  <origin xyz="0 0 0" rpy="0 0 0"/>
-	  <geometry>
-	  <box size="${sensor_box} ${sensor_box} ${sensor_box}"
-/>
-          </geometry>
-	</visual>
+    <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <box size="${sensor_box} ${sensor_box} ${sensor_box}"/>
+        </geometry>
+    </visual>
 
     <inertial>
-      <mass value="1e-5" />
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        <mass value="1e-5" />
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
     </inertial>
 </link>
 
 
-<!-- ====================================================================== -->  
+<!-- ********************************************************************** -->
 <!--Velodyne LIDAR-->
+<!-- ********************************************************************** -->
 
 <joint name="velodyne_joint" type="fixed">
-	<origin xyz="0 0 ${sensor_box/2 + 0.01}" rpy="0 0 0"/>
-	<axis xyz="0 0 1"/>
-	<parent link="camera_link"/>
-	<child link="velodyne_link"/>
+    <origin xyz="0 0 ${sensor_box/2 + 0.01}" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <parent link="camera_link"/>
+    <child link="velodyne_link"/>
 </joint>
 
 <link name="velodyne_link">
-        <collision>
-          <origin xyz="0 0 0" rpy="0 0 0"/>
-          <geometry>
-           <box size="${sensor_box} ${sensor_box} ${sensor_box}"/>
-          </geometry>
-        </collision>
+    <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <box size="${sensor_box} ${sensor_box} ${sensor_box}"/>
+        </geometry>
+    </collision>
 
-        <visual>
-          <origin xyz="0 0 0" rpy="0 0 0"/>
-          <geometry>
-           <box size="${sensor_box} ${sensor_box} ${sensor_box}"/>
-          </geometry>
-        </visual>
+    <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <box size="${sensor_box} ${sensor_box} ${sensor_box}"/>
+        </geometry>
+    </visual>
 
     <inertial>
-      <mass value="1e-5" />
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        <mass value="1e-5" />
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
     </inertial>
 </link>
 
+
+<!-- ********************************************************************** -->
+<!-- SICKLIDAR-->
+<!-- ********************************************************************** -->
+
 <joint name="front_laser_joint" type="fixed">
-	<origin xyz="${car_to_bumper} 0 ${front_bumper_height + sensor_box/2 + 0.01}" rpy="0 0 0"/>
-	<axis xyz="0 0 1"/>
-	<parent link="base_link"/>
-	<child link="front_laser_link"/>
+    <origin xyz="${car_to_bumper} 0 ${front_bumper_height + sensor_box/2 + 0.01}" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <parent link="base_link"/>
+    <child link="front_laser_link"/>
 </joint>
 
 <link name="front_laser_link">
-     <parent link="front_laser_joint"/>
-        <collision>
-          <origin xyz="0 0 0" rpy="0 0.0 0"/>
-          <geometry>
-           <box size="${sensor_box} ${sensor_box} ${sensor_box}"/>
-          </geometry>
-        </collision>
+    <parent link="front_laser_joint"/>
+    <collision>
+        <origin xyz="0 0 0" rpy="0 0.0 0"/>
+        <geometry>
+            <box size="${sensor_box} ${sensor_box} ${sensor_box}"/>
+        </geometry>
+    </collision>
 
-        <visual>
-          <origin xyz="0 0 0" rpy="0 0 0"/>
-          <geometry>
-           <box size="${sensor_box} ${sensor_box} ${sensor_box}"/>
-          </geometry>
-        </visual>
+    <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <box size="${sensor_box} ${sensor_box} ${sensor_box}"/>
+        </geometry>
+    </visual>
 
     <inertial>
-      <mass value="1e-5" />
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        <mass value="1e-5" />
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
     </inertial>
 </link>
+
 
 </robot>
