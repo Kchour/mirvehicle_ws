@@ -43,11 +43,7 @@
 <!-- ********************************************************************** -->
 
 <joint name="camera_left_joint" type="fixed">
-<<<<<<< HEAD
     <origin xyz="-0.75 ${track_width/2-0.12} ${0.525 + camera_box/2 + 1.25}" rpy="0 0 ${PI/2}"/>
-=======
-    <origin xyz="-0.75 0.5 ${0.595 + camera_box/2 + 1.25}" rpy="0 0 ${PI/2}"/>
->>>>>>> 392b662d9e2527d674f22fc6910ae1a39eb32f01
     <axis xyz="0 0 1"/>
     <parent link="base_link"/>
     <child link="camera_left_link"/>
@@ -81,11 +77,7 @@
 <!-- ********************************************************************** -->
 
 <joint name="camera_right_joint" type="fixed">
-<<<<<<< HEAD
     <origin xyz="-0.75 -${track_width/2-0.12} ${0.525 + camera_box/2 + 1.25}" rpy="0 0 -${PI/2}"/>
-=======
-    <origin xyz="-0.75 -0.5 ${0.595 + camera_box/2 + 1.25}" rpy="0 0 -${PI/2}"/>
->>>>>>> 392b662d9e2527d674f22fc6910ae1a39eb32f01
     <axis xyz="0 0 1"/>
     <parent link="base_link"/>
     <child link="camera_right_link"/>
@@ -119,11 +111,7 @@
 <!-- ********************************************************************** -->
 
 <joint name="camera_joint" type="fixed">
-<<<<<<< HEAD
     <origin xyz="0 0 ${0.725 + sensor_box/2 + 1.15}" rpy="0 0 0"/>
-=======
-    <origin xyz="0 0 ${0.595+ sensor_box/2 + 1.25}" rpy="0 0 0"/>
->>>>>>> 392b662d9e2527d674f22fc6910ae1a39eb32f01
     <axis xyz="0 0 1"/>
     <parent link="base_link"/>
     <child link="camera_link"/>
