@@ -280,7 +280,7 @@
     </library_effects>
     <library_images>
         <image id="ID8">
-            <init_from>ford_escape_wheel/Esc-Tire1.tga</init_from>
+            <init_from>wheel/Esc-Tire1.tga</init_from>
         </image>
     </library_images>
     <scene>

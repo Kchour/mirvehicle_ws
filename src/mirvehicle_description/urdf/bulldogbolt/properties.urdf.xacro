@@ -12,12 +12,14 @@
 <xacro:property name="wheelbase" value="2.6"/>
 <xacro:property name="track_width" value="1.501"/>
 
-<xacro:property name="car_height" value="1.594"/>
+<!-- TODO: fix the car_height -->
+<xacro:property name="car_height" value="1.4478"/> <!--1.594"/-->
 <xacro:property name="car_width" value="1.765"/>
 <xacro:property name="car_length" value="4.166"/>
 
-<xacro:property name="base_height" value="1.0639"/>
-<xacro:property name="base_mass" value="1625"/>
+<!-- TODO: fix the base_mass with its inertia -->
+<xacro:property name="base_height" value="1.04"/>
+<xacro:property name="base_mass" value="2050"/> <!--1625"/-->
 <xacro:property name="base_mass_ixx" value="63"/>
 <xacro:property name="base_mass_iyy" value="1048"/>
 <xacro:property name="base_mass_izz" value="1111"/>
@@ -27,7 +29,9 @@
 <xacro:property name="tire_y" value="${track_width/2}"/>
 <xacro:property name="tire_length" value="0.215"/>
 <xacro:property name="tire_diameter" value="0.6468"/>
-<xacro:property name="tire_radius" value="${tire_diameter/2}"/>
+<xacro:property name="tire_radius" value="0.356"/>
+
+<!-- TODO: fix the tire mass with its inertia -->
 <xacro:property name="tire_mass" value="40"/>
 <xacro:property name="tire_mass_ixx" value="54"/>
 <xacro:property name="tire_mass_iyy" value="56"/>
@@ -37,10 +41,16 @@
     <origin xyz="0 0 0" rpy="${PI/2} 0 0"/>
 </xacro:property>
 <xacro:property name="tire_origin_2">
-    <origin xyz="0 0 0" rpy="0 0 ${PI/2}"/>
+    <origin xyz="-0.3065 -0.765 1.372" rpy="0 0 ${-PI/2}"/>
 </xacro:property>
 <xacro:property name="tire_origin_3">
-    <origin xyz="0 0 0" rpy="0 0 ${-PI/2}"/>
+    <origin xyz="0.3065 0.765 1.372" rpy="0 0 ${PI/2}"/>
+</xacro:property>
+
+<xacro:property name="wheel_geometry">
+    <geometry>
+        <mesh filename="package://mirvehicle_description/meshes/$(arg robot_name)/wheel.dae" scale="0.0383 0.0383 0.0383"/>
+    </geometry>  
 </xacro:property>
 
 <xacro:property name="dist_to_bumper" value="2.1"/>

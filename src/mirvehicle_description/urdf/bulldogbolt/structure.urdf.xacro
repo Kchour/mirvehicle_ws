@@ -77,10 +77,7 @@
 
     <visual>
         <xacro:insert_block name="tire_origin_2"/>
-        <geometry>
-            <mesh filename="package://mirvehicle_description/meshes/$(arg robot_name)/wheel.dae"/>
-            <scale xyz="1.2 1 1"/>
-        </geometry>
+        <xacro:insert_block name="wheel_geometry"/>
     </visual>
 
     <inertial>
@@ -118,10 +115,7 @@
 
     <visual>
         <xacro:insert_block name="tire_origin_3"/>
-        <geometry>
-            <mesh filename="package://mirvehicle_description/meshes/$(arg robot_name)/wheel.dae"/>
-            <scale xyz="1.2 1 1"/>
-        </geometry>
+        <xacro:insert_block name="wheel_geometry"/>
     </visual>
 
     <inertial>
@@ -162,10 +156,7 @@
 
     <visual>
         <xacro:insert_block name="tire_origin_2"/>
-        <geometry>
-            <mesh filename="package://mirvehicle_description/meshes/$(arg robot_name)/wheel.dae"/>
-            <scale xyz="1.2 1 1"/>
-        </geometry>
+        <xacro:insert_block name="wheel_geometry"/>
      </visual>
 
     <inertial>
@@ -200,10 +191,7 @@
 
     <visual>
         <xacro:insert_block name="tire_origin_3"/>
-        <geometry>
-            <mesh filename="package://mirvehicle_description/meshes/$(arg robot_name)/wheel.dae"/>
-            <scale xyz="1.2 1 1"/>
-        </geometry>  
+        <xacro:insert_block name="wheel_geometry"/>
     </visual>
 
     <inertial>
