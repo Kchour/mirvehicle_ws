@@ -1,8 +1,8 @@
-prefix=/home/jaerock/mirvehicle_ws/devel
+prefix=/home/mir-lab/mirvehicle_ws/devel
 
 Name: mirvehicle_gazebo
 Description: Description of mirvehicle_gazebo
 Version: 1.0.0
 Cflags: 
-Libs: -L/home/jaerock/mirvehicle_ws/devel/lib 
+Libs: -L/home/mir-lab/mirvehicle_ws/devel/lib 
 Requires: 

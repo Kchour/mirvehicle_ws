@@ -1,24 +1,23 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/jaerock/mirvehicle_ws/build/CMakeFiles/CMakeTmp
+Change Dir: /home/mir-lab/mirvehicle_ws/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_fd800/fast"
-/usr/bin/make -f CMakeFiles/cmTC_fd800.dir/build.make CMakeFiles/cmTC_fd800.dir/build
-make[1]: Entering directory '/home/jaerock/mirvehicle_ws/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_fd800.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_fd800.dir/CheckSymbolExists.c.o   -c /home/jaerock/mirvehicle_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_fd800
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fd800.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_fd800.dir/CheckSymbolExists.c.o  -o cmTC_fd800 -rdynamic 
-CMakeFiles/cmTC_fd800.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:/usr/bin/make "cmTryCompileExec1251422005/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1251422005.dir/build.make CMakeFiles/cmTryCompileExec1251422005.dir/build
+make[1]: Entering directory `/home/mir-lab/mirvehicle_ws/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/mir-lab/mirvehicle_ws/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1251422005.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1251422005.dir/CheckSymbolExists.c.o   -c /home/mir-lab/mirvehicle_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec1251422005
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1251422005.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1251422005.dir/CheckSymbolExists.c.o  -o cmTryCompileExec1251422005 -rdynamic 
+CMakeFiles/cmTryCompileExec1251422005.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_fd800.dir/build.make:97: recipe for target 'cmTC_fd800' failed
-make[1]: *** [cmTC_fd800] Error 1
-make[1]: Leaving directory '/home/jaerock/mirvehicle_ws/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_fd800/fast' failed
-make: *** [cmTC_fd800/fast] Error 2
+make[1]: *** [cmTryCompileExec1251422005] Error 1
+make[1]: Leaving directory `/home/mir-lab/mirvehicle_ws/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec1251422005/fast] Error 2
 
-File /home/jaerock/mirvehicle_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/mir-lab/mirvehicle_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,22 +33,21 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/jaerock/mirvehicle_ws/build/CMakeFiles/CMakeTmp
+Change Dir: /home/mir-lab/mirvehicle_ws/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_fbd44/fast"
-/usr/bin/make -f CMakeFiles/cmTC_fbd44.dir/build.make CMakeFiles/cmTC_fbd44.dir/build
-make[1]: Entering directory '/home/jaerock/mirvehicle_ws/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_fbd44.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_fbd44.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_fbd44
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fbd44.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_fbd44.dir/CheckFunctionExists.c.o  -o cmTC_fbd44 -rdynamic -lpthreads 
+Run Build Command:/usr/bin/make "cmTryCompileExec927229880/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec927229880.dir/build.make CMakeFiles/cmTryCompileExec927229880.dir/build
+make[1]: Entering directory `/home/mir-lab/mirvehicle_ws/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/mir-lab/mirvehicle_ws/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec927229880.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec927229880.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec927229880
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec927229880.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec927229880.dir/CheckFunctionExists.c.o  -o cmTryCompileExec927229880 -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_fbd44.dir/build.make:97: recipe for target 'cmTC_fbd44' failed
-make[1]: *** [cmTC_fbd44] Error 1
-make[1]: Leaving directory '/home/jaerock/mirvehicle_ws/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_fbd44/fast' failed
-make: *** [cmTC_fbd44/fast] Error 2
+make[1]: Leaving directory `/home/mir-lab/mirvehicle_ws/build/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec927229880] Error 1
+make: *** [cmTryCompileExec927229880/fast] Error 2
 
 

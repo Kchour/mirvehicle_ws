@@ -1,10 +1,10 @@
-file(REMOVE_RECURSE
+FILE(REMOVE_RECURSE
   "CMakeFiles/sicklms.dir/ros/sicklms/sicklms.cpp.o"
-  "/home/jaerock/mirvehicle_ws/devel/lib/sicktoolbox_wrapper/sicklms.pdb"
-  "/home/jaerock/mirvehicle_ws/devel/lib/sicktoolbox_wrapper/sicklms"
+  "/home/mir-lab/mirvehicle_ws/devel/lib/sicktoolbox_wrapper/sicklms.pdb"
+  "/home/mir-lab/mirvehicle_ws/devel/lib/sicktoolbox_wrapper/sicklms"
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang CXX)
-  include(CMakeFiles/sicklms.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+FOREACH(lang CXX)
+  INCLUDE(CMakeFiles/sicklms.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)

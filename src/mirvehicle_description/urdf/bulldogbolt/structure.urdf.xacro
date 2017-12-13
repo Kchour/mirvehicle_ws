@@ -19,7 +19,7 @@
     </collision>
     <visual>
         <!-- origin xyz="-0.25 0 ${base_height + 0.05}" rpy="0 0 0"/ -->  
-        <origin xyz="0.05 0 ${base_height/3}" rpy="1.570796 0 1.570796"/>  
+        <origin xyz="0.05 0 0.3235" rpy="1.570796 0 1.570796"/>  
         <geometry>
             <!-- mesh filename="package://mirvehicle/meshes/ford_escape_no_wheels_2.dae"/ -->
             <mesh filename="package://mirvehicle_description/meshes/$(arg robot_name)/body.dae" scale="0.0383 0.0383 0.0383" />
@@ -60,7 +60,7 @@
 <joint name="back_left_wheel_joint" type="continuous">
     <parent link="base_link"/>
     <child link="back_left_wheel_link"/>
-    <origin xyz="${-tyre_x} ${tyre_y} ${tyre_r}" rpy="0 0 0"/>
+    <origin xyz="${-tyre_x} ${tyre_y} 0.608" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
     <dynamics damping="0.1"/>
     <limit effort="10000" velocity="100" />
@@ -76,10 +76,9 @@
     </collision>
 
     <visual>
-        <xacro:insert_block name="tyre_origin_2"/>
+        <origin xyz="-0.3065 -0.765 1.372" rpy="0 0 ${-PI/2}"/>
         <geometry>
-            <mesh filename="package://mirvehicle_description/meshes/$(arg robot_name)/wheel.dae"/>
-            <scale xyz="1.2 1 1"/>
+            <mesh filename="package://mirvehicle_description/meshes/$(arg robot_name)/wheel.dae" scale="0.0383 0.0383 0.0383"/>
         </geometry>
     </visual>
 
@@ -101,7 +100,7 @@
 <joint name="back_right_wheel_joint" type="continuous">
     <parent link="base_link"/>
     <child link="back_right_wheel_link"/>
-    <origin xyz="${-tyre_x} ${-tyre_y} ${tyre_r}" rpy="0 0 0"/>
+    <origin xyz="${-tyre_x} ${-tyre_y} 0.608" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
     <dynamics damping="0.1"/>
     <limit effort="10000" velocity="100" />
@@ -117,10 +116,9 @@
     </collision>
 
     <visual>
-        <xacro:insert_block name="tyre_origin_3"/>
+        <origin xyz="0.3065 0.765 1.372" rpy="0 0 ${PI/2}"/>
         <geometry>
-            <mesh filename="package://mirvehicle_description/meshes/$(arg robot_name)/wheel.dae"/>
-            <scale xyz="1.2 1 1"/>
+            <mesh filename="package://mirvehicle_description/meshes/$(arg robot_name)/wheel.dae" scale="0.0383 0.0383 0.0383"/>
         </geometry>
     </visual>
 
@@ -161,10 +159,9 @@
     </collision>
 
     <visual>
-        <xacro:insert_block name="tyre_origin_2"/>
+        <origin xyz="-0.3065 -0.765 1.372" rpy="0 0 ${-PI/2}"/>
         <geometry>
-            <mesh filename="package://mirvehicle_description/meshes/$(arg robot_name)/wheel.dae"/>
-            <scale xyz="1.2 1 1"/>
+            <mesh filename="package://mirvehicle_description/meshes/$(arg robot_name)/wheel.dae" scale="0.0383 0.0383 0.0383"/>
         </geometry>
      </visual>
 
@@ -199,10 +196,9 @@
     </collision>
 
     <visual>
-        <xacro:insert_block name="tyre_origin_3"/>
+        <origin xyz="0.3065 0.765 1.372" rpy="0 0 ${PI/2}"/>
         <geometry>
-            <mesh filename="package://mirvehicle_description/meshes/$(arg robot_name)/wheel.dae"/>
-            <scale xyz="1.2 1 1"/>
+            <mesh filename="package://mirvehicle_description/meshes/$(arg robot_name)/wheel.dae" scale="0.0383 0.0383 0.0383"/>
         </geometry>  
     </visual>
 
@@ -224,7 +220,7 @@
 <joint name="front_left_steering_joint" type="revolute">
     <parent link="base_link"/>
     <child link="front_left_steering_link"/>
-    <origin xyz="${tyre_x} ${car_width/2 + str_length/2} ${tyre_r}" rpy="0 0 0"/>
+    <origin xyz="${tyre_x} ${car_width/2 + str_length/2} 0.608" rpy="0 0 0"/>
     <axis xyz="0 0 1"/>
     <limit effort="1000.0" lower="${-str_angle}" upper="${str_angle}" velocity="0.5"/>
 </joint>
@@ -263,7 +259,7 @@
 <joint name="front_right_steering_joint" type="revolute">
     <parent link="base_link"/>
     <child link="front_right_steering_link"/>
-    <origin xyz="${tyre_x} ${-car_width/2 - str_length/2} ${tyre_r}" rpy="0 0 0"/>
+    <origin xyz="${tyre_x} ${-car_width/2 - str_length/2} 0.608" rpy="0 0 0"/>
     <axis xyz="0 0 1"/>
     <limit effort="1000.0" lower="${-str_angle}" upper="${str_angle}" velocity="0.5"/>
 </joint>

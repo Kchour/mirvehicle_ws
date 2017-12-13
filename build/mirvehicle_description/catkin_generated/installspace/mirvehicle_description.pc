@@ -1,8 +1,8 @@
-prefix=/home/jaerock/mirvehicle_ws/install
+prefix=/home/mir-lab/mirvehicle_ws/install
 
 Name: mirvehicle_description
 Description: Description of mirvehicle_description
 Version: 1.0.0
 Cflags: 
-Libs: -L/home/jaerock/mirvehicle_ws/install/lib 
+Libs: -L/home/mir-lab/mirvehicle_ws/install/lib 
 Requires: 

@@ -1,10 +1,10 @@
-file(REMOVE_RECURSE
+FILE(REMOVE_RECURSE
   "CMakeFiles/ld_more_config.dir/c++/examples/ld/ld_more_config/src/main.cc.o"
-  "/home/jaerock/mirvehicle_ws/devel/lib/sicktoolbox/ld_more_config.pdb"
-  "/home/jaerock/mirvehicle_ws/devel/lib/sicktoolbox/ld_more_config"
+  "/home/mir-lab/mirvehicle_ws/devel/lib/sicktoolbox/ld_more_config.pdb"
+  "/home/mir-lab/mirvehicle_ws/devel/lib/sicktoolbox/ld_more_config"
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang CXX)
-  include(CMakeFiles/ld_more_config.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+FOREACH(lang CXX)
+  INCLUDE(CMakeFiles/ld_more_config.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)

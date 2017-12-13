@@ -1,8 +1,8 @@
-prefix=/home/jaerock/mirvehicle_ws/install
+prefix=/home/mir-lab/mirvehicle_ws/install
 
 Name: sicktoolbox
 Description: Description of sicktoolbox
 Version: 1.0.103
-Cflags: -I/home/jaerock/mirvehicle_ws/install/include
-Libs: -L/home/jaerock/mirvehicle_ws/install/lib -lSickLD -lSickLMS1xx -lSickLMS2xx
+Cflags: -I/home/mir-lab/mirvehicle_ws/install/include
+Libs: -L/home/mir-lab/mirvehicle_ws/install/lib -lSickLD -lSickLMS1xx -lSickLMS2xx
 Requires: 

@@ -1,8 +1,8 @@
-prefix=/home/jaerock/mirvehicle_ws/install
+prefix=/home/mir-lab/mirvehicle_ws/install
 
 Name: mirvehicle
 Description: Description of mirvehicle
 Version: 1.0.0
-Cflags: -I/home/jaerock/mirvehicle_ws/install/include
-Libs: -L/home/jaerock/mirvehicle_ws/install/lib -lmirvehicle
+Cflags: -I/home/mir-lab/mirvehicle_ws/install/include
+Libs: -L/home/mir-lab/mirvehicle_ws/install/lib -lmirvehicle
 Requires: geometry_msgs roscpp rospy sensor_msgs std_msgs velodyne_pointcloud tf

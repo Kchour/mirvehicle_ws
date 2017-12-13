@@ -1,21 +1,21 @@
 # The set of languages for which implicit dependencies are needed:
-set(CMAKE_DEPENDS_LANGUAGES
+SET(CMAKE_DEPENDS_LANGUAGES
   "CXX"
   )
 # The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/jaerock/mirvehicle_ws/src/obstaclestopper/ert_main.cpp" "/home/jaerock/mirvehicle_ws/build/obstaclestopper/CMakeFiles/obstaclestopper_node.dir/ert_main.cpp.o"
-  "/home/jaerock/mirvehicle_ws/src/obstaclestopper/linuxinitialize.cpp" "/home/jaerock/mirvehicle_ws/build/obstaclestopper/CMakeFiles/obstaclestopper_node.dir/linuxinitialize.cpp.o"
-  "/home/jaerock/mirvehicle_ws/src/obstaclestopper/obstacleStopper.cpp" "/home/jaerock/mirvehicle_ws/build/obstaclestopper/CMakeFiles/obstaclestopper_node.dir/obstacleStopper.cpp.o"
-  "/home/jaerock/mirvehicle_ws/src/obstaclestopper/obstacleStopper_data.cpp" "/home/jaerock/mirvehicle_ws/build/obstaclestopper/CMakeFiles/obstaclestopper_node.dir/obstacleStopper_data.cpp.o"
-  "/home/jaerock/mirvehicle_ws/src/obstaclestopper/slros_busmsg_conversion.cpp" "/home/jaerock/mirvehicle_ws/build/obstaclestopper/CMakeFiles/obstaclestopper_node.dir/slros_busmsg_conversion.cpp.o"
-  "/home/jaerock/mirvehicle_ws/src/obstaclestopper/slros_generic_param.cpp" "/home/jaerock/mirvehicle_ws/build/obstaclestopper/CMakeFiles/obstaclestopper_node.dir/slros_generic_param.cpp.o"
-  "/home/jaerock/mirvehicle_ws/src/obstaclestopper/slros_initialize.cpp" "/home/jaerock/mirvehicle_ws/build/obstaclestopper/CMakeFiles/obstaclestopper_node.dir/slros_initialize.cpp.o"
+SET(CMAKE_DEPENDS_CHECK_CXX
+  "/home/mir-lab/mirvehicle_ws/src/obstaclestopper/ert_main.cpp" "/home/mir-lab/mirvehicle_ws/build/obstaclestopper/CMakeFiles/obstaclestopper_node.dir/ert_main.cpp.o"
+  "/home/mir-lab/mirvehicle_ws/src/obstaclestopper/linuxinitialize.cpp" "/home/mir-lab/mirvehicle_ws/build/obstaclestopper/CMakeFiles/obstaclestopper_node.dir/linuxinitialize.cpp.o"
+  "/home/mir-lab/mirvehicle_ws/src/obstaclestopper/obstacleStopper.cpp" "/home/mir-lab/mirvehicle_ws/build/obstaclestopper/CMakeFiles/obstaclestopper_node.dir/obstacleStopper.cpp.o"
+  "/home/mir-lab/mirvehicle_ws/src/obstaclestopper/obstacleStopper_data.cpp" "/home/mir-lab/mirvehicle_ws/build/obstaclestopper/CMakeFiles/obstaclestopper_node.dir/obstacleStopper_data.cpp.o"
+  "/home/mir-lab/mirvehicle_ws/src/obstaclestopper/slros_busmsg_conversion.cpp" "/home/mir-lab/mirvehicle_ws/build/obstaclestopper/CMakeFiles/obstaclestopper_node.dir/slros_busmsg_conversion.cpp.o"
+  "/home/mir-lab/mirvehicle_ws/src/obstaclestopper/slros_generic_param.cpp" "/home/mir-lab/mirvehicle_ws/build/obstaclestopper/CMakeFiles/obstaclestopper_node.dir/slros_generic_param.cpp.o"
+  "/home/mir-lab/mirvehicle_ws/src/obstaclestopper/slros_initialize.cpp" "/home/mir-lab/mirvehicle_ws/build/obstaclestopper/CMakeFiles/obstaclestopper_node.dir/slros_initialize.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+SET(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
-set(CMAKE_TARGET_DEFINITIONS_CXX
+SET(CMAKE_TARGET_DEFINITIONS
   "ALLOCATIONFCN=0"
   "CLASSIC_INTERFACE=0"
   "HAVESTDIO"
@@ -40,17 +40,16 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
   "__MW_TARGET_USE_HARDWARE_RESOURCES_H__"
   )
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/jaerock/mirvehicle_ws/src/obstaclestopper/include"
-  "/home/jaerock/mirvehicle_ws/src/obstaclestopper"
-  "/opt/ros/kinetic/include"
-  "/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
-  )
-
 # Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
+SET(CMAKE_TARGET_LINKED_INFO_FILES
   )
 
-# Fortran module output directory.
-set(CMAKE_Fortran_TARGET_MODULE_DIR "")
+# The include file search paths:
+SET(CMAKE_C_TARGET_INCLUDE_PATH
+  "/home/mir-lab/mirvehicle_ws/src/obstaclestopper/include"
+  "/home/mir-lab/mirvehicle_ws/src/obstaclestopper"
+  "/opt/ros/indigo/include"
+  )
+SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
+SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
+SET(CMAKE_ASM_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

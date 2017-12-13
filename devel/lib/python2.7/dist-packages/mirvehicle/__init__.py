@@ -7,7 +7,7 @@ from sys import path as sys_path
 
 from pkgutil import extend_path
 
-__extended_path = "/home/jaerock/mirvehicle_ws/src/mirvehicle/src".split(";")
+__extended_path = "/home/mir-lab/mirvehicle_ws/src/mirvehicle/src".split(";")
 for p in reversed(__extended_path):
     sys_path.insert(0, p)
     del p

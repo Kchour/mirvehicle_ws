@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/jaerock/mirvehicle_ws/src/sicktoolbox_wrapper
-# Build directory: /home/jaerock/mirvehicle_ws/build/sicktoolbox_wrapper
+# Source directory: /home/mir-lab/mirvehicle_ws/src/sicktoolbox_wrapper
+# Build directory: /home/mir-lab/mirvehicle_ws/build/sicktoolbox_wrapper
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

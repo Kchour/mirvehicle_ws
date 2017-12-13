@@ -1,4 +1,4 @@
-file(REMOVE_RECURSE
+FILE(REMOVE_RECURSE
   "CMakeFiles/obstaclestopper_node.dir/ert_main.cpp.o"
   "CMakeFiles/obstaclestopper_node.dir/obstacleStopper.cpp.o"
   "CMakeFiles/obstaclestopper_node.dir/obstacleStopper_data.cpp.o"
@@ -6,11 +6,11 @@ file(REMOVE_RECURSE
   "CMakeFiles/obstaclestopper_node.dir/slros_busmsg_conversion.cpp.o"
   "CMakeFiles/obstaclestopper_node.dir/slros_initialize.cpp.o"
   "CMakeFiles/obstaclestopper_node.dir/slros_generic_param.cpp.o"
-  "/home/jaerock/mirvehicle_ws/devel/lib/obstaclestopper/obstaclestopper_node.pdb"
-  "/home/jaerock/mirvehicle_ws/devel/lib/obstaclestopper/obstaclestopper_node"
+  "/home/mir-lab/mirvehicle_ws/devel/lib/obstaclestopper/obstaclestopper_node.pdb"
+  "/home/mir-lab/mirvehicle_ws/devel/lib/obstaclestopper/obstaclestopper_node"
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang CXX)
-  include(CMakeFiles/obstaclestopper_node.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+FOREACH(lang CXX)
+  INCLUDE(CMakeFiles/obstaclestopper_node.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)
