@@ -14,7 +14,7 @@
     <collision>
         <origin xyz="0 0 ${base_height}" rpy="0 0 0"/>  
         <geometry>
-            <box size="2.62 ${car_width} ${car_height}"/>
+            <box size="${car_length} ${car_width} ${car_height}"/>
         </geometry>
     </collision>
     <visual>
@@ -60,7 +60,7 @@
 <joint name="back_left_wheel_joint" type="continuous">
     <parent link="base_link"/>
     <child link="back_left_wheel_link"/>
-    <origin xyz="${-tyre_x} ${tyre_y} ${tyre_r}" rpy="0 0 0"/>
+    <origin xyz="${-tire_x} ${tire_y} ${tire_diameter}" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
     <dynamics damping="0.1"/>
     <limit effort="10000" velocity="100" />
@@ -69,14 +69,14 @@
 
 <link name="back_left_wheel_link">
     <collision>
-        <xacro:insert_block name="tyre_origin"/>
+        <xacro:insert_block name="tire_origin"/>
         <geometry>
-            <cylinder length="${tyre_length}" radius="${tyre_radius}"/>
+            <cylinder length="${tire_length}" radius="${tire_radius}"/>
         </geometry>
     </collision>
 
     <visual>
-        <xacro:insert_block name="tyre_origin_2"/>
+        <xacro:insert_block name="tire_origin_2"/>
         <geometry>
             <mesh filename="package://mirvehicle_description/meshes/$(arg robot_name)/wheel.dae"/>
             <scale xyz="1.2 1 1"/>
@@ -85,11 +85,11 @@
 
     <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <mass value="${tyre_mass}"/>
+        <mass value="${tire_mass}"/>
         <inertia
-            ixx="${tyre_mass_ixx}"  ixy="0.000000"  ixz="0.000000"
-            iyy="${tyre_mass_iyy}"  iyz="0.000000"
-            izz="${tyre_mass_izz}"/>
+            ixx="${tire_mass_ixx}"  ixy="0.000000"  ixz="0.000000"
+            iyy="${tire_mass_iyy}"  iyz="0.000000"
+            izz="${tire_mass_izz}"/>
     </inertial>
 </link>
 
@@ -101,7 +101,7 @@
 <joint name="back_right_wheel_joint" type="continuous">
     <parent link="base_link"/>
     <child link="back_right_wheel_link"/>
-    <origin xyz="${-tyre_x} ${-tyre_y} ${tyre_r}" rpy="0 0 0"/>
+    <origin xyz="${-tire_x} ${-tire_y} ${tire_diameter}" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
     <dynamics damping="0.1"/>
     <limit effort="10000" velocity="100" />
@@ -110,14 +110,14 @@
 
 <link name="back_right_wheel_link">
     <collision>
-        <xacro:insert_block name="tyre_origin"/>
+        <xacro:insert_block name="tire_origin"/>
         <geometry>
-            <cylinder length="${tyre_length}" radius="${tyre_radius}"/>
+            <cylinder length="${tire_length}" radius="${tire_radius}"/>
         </geometry>
     </collision>
 
     <visual>
-        <xacro:insert_block name="tyre_origin_3"/>
+        <xacro:insert_block name="tire_origin_3"/>
         <geometry>
             <mesh filename="package://mirvehicle_description/meshes/$(arg robot_name)/wheel.dae"/>
             <scale xyz="1.2 1 1"/>
@@ -126,11 +126,11 @@
 
     <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <mass value="${tyre_mass}"/>
+        <mass value="${tire_mass}"/>
         <inertia
-            ixx="${tyre_mass_ixx}"  ixy="0.000000"  ixz="0.000000"
-            iyy="${tyre_mass_iyy}"  iyz="0.000000"
-            izz="${tyre_mass_izz}"/>
+            ixx="${tire_mass_ixx}"  ixy="0.000000"  ixz="0.000000"
+            iyy="${tire_mass_iyy}"  iyz="0.000000"
+            izz="${tire_mass_izz}"/>
     </inertial>
 </link>
 
@@ -142,7 +142,7 @@
 <joint name="front_left_wheel_joint" type="continuous">
     <parent link="front_left_steering_link"/>
     <child link="front_left_wheel_link"/>
-    <origin xyz="0 ${str_length/2 + tyre_length/2} 0" rpy="0 0 0"/>
+    <origin xyz="0 ${steer_length/2 + tire_length/2} 0" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
 
     <dynamics damping="0.1"/>
@@ -156,12 +156,12 @@
     <collision>     
         <origin xyz="0 0 0" rpy="${PI/2} 0 0"/>
         <geometry>
-             <cylinder length="${tyre_length}" radius="${tyre_radius}"/>
+             <cylinder length="${tire_length}" radius="${tire_radius}"/>
         </geometry>
     </collision>
 
     <visual>
-        <xacro:insert_block name="tyre_origin_2"/>
+        <xacro:insert_block name="tire_origin_2"/>
         <geometry>
             <mesh filename="package://mirvehicle_description/meshes/$(arg robot_name)/wheel.dae"/>
             <scale xyz="1.2 1 1"/>
@@ -170,11 +170,11 @@
 
     <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <mass value="${tyre_mass}"/>
+        <mass value="${tire_mass}"/>
         <inertia
-            ixx="${tyre_mass_ixx}"  ixy="0.000000"  ixz="0.000000"
-            iyy="${tyre_mass_iyy}"  iyz="0.000000"
-            izz="${tyre_mass_izz}"/>
+            ixx="${tire_mass_ixx}"  ixy="0.000000"  ixz="0.000000"
+            iyy="${tire_mass_iyy}"  iyz="0.000000"
+            izz="${tire_mass_izz}"/>
     </inertial>
 </link>
 
@@ -186,20 +186,20 @@
 <joint name="front_right_wheel_joint" type="continuous">
     <parent link="front_right_steering_link"/>
     <child link="front_right_wheel_link"/>
-    <origin xyz="0 ${-str_length/2 - tyre_length/2} 0" rpy="0 0 0"/>
+    <origin xyz="0 ${-steer_length/2 - tire_length/2} 0" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
 </joint>
 
 <link name="front_right_wheel_link">
     <collision>
-        <xacro:insert_block name="tyre_origin"/>
+        <xacro:insert_block name="tire_origin"/>
         <geometry>
-            <cylinder length="${tyre_length}" radius="${tyre_radius}"/>
+            <cylinder length="${tire_length}" radius="${tire_radius}"/>
         </geometry>
     </collision>
 
     <visual>
-        <xacro:insert_block name="tyre_origin_3"/>
+        <xacro:insert_block name="tire_origin_3"/>
         <geometry>
             <mesh filename="package://mirvehicle_description/meshes/$(arg robot_name)/wheel.dae"/>
             <scale xyz="1.2 1 1"/>
@@ -208,11 +208,11 @@
 
     <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <mass value="${tyre_mass}"/>
+        <mass value="${tire_mass}"/>
     <inertia
-        ixx="${tyre_mass_ixx}"  ixy="0.000000"  ixz="0.000000"
-        iyy="${tyre_mass_iyy}"  iyz="0.000000"
-        izz="${tyre_mass_izz}"/>
+        ixx="${tire_mass_ixx}"  ixy="0.000000"  ixz="0.000000"
+        iyy="${tire_mass_iyy}"  iyz="0.000000"
+        izz="${tire_mass_izz}"/>
     </inertial>
 </link>
 
@@ -224,24 +224,24 @@
 <joint name="front_left_steering_joint" type="revolute">
     <parent link="base_link"/>
     <child link="front_left_steering_link"/>
-    <origin xyz="${tyre_x} ${car_width/2 + str_length/2} ${tyre_r}" rpy="0 0 0"/>
+    <origin xyz="${tire_x} ${tire_y - (tire_length+steer_length)/2} ${tire_diameter}" rpy="0 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="1000.0" lower="${-str_angle}" upper="${str_angle}" velocity="0.5"/>
+    <limit effort="1000.0" lower="${-steer_angle_limit}" upper="${steer_angle_limit}" velocity="0.5"/>
 </joint>
 
 <link name="front_left_steering_link">
     <!-- ?? parent link="base_link"/ -->
     <collision>
-        <xacro:insert_block name="tyre_origin"/>
+        <xacro:insert_block name="tire_origin"/>
         <geometry>
-            <cylinder length="${str_length}" radius="${str_radius}"/>
+            <cylinder length="${steer_length}" radius="${steer_radius}"/>
         </geometry>
     </collision>
 
     <visual>
-        <xacro:insert_block name="tyre_origin"/>
+        <xacro:insert_block name="tire_origin"/>
         <geometry>
-            <cylinder length="${str_length}" radius="${str_radius}"/>
+            <cylinder length="${steer_length}" radius="${steer_radius}"/>
         </geometry>
     </visual>
 
@@ -263,23 +263,23 @@
 <joint name="front_right_steering_joint" type="revolute">
     <parent link="base_link"/>
     <child link="front_right_steering_link"/>
-    <origin xyz="${tyre_x} ${-car_width/2 - str_length/2} ${tyre_r}" rpy="0 0 0"/>
+    <origin xyz="${tire_x} ${-tire_y + (tire_length+steer_length)/2} ${tire_diameter}" rpy="0 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="1000.0" lower="${-str_angle}" upper="${str_angle}" velocity="0.5"/>
+    <limit effort="1000.0" lower="${-steer_angle_limit}" upper="${steer_angle_limit}" velocity="0.5"/>
 </joint>
 
 <link name="front_right_steering_link">
     <collision>
-        <xacro:insert_block name="tyre_origin"/>
+        <xacro:insert_block name="tire_origin"/>
         <geometry>
-            <cylinder length="${str_length}" radius="${str_radius}"/>
+            <cylinder length="${steer_length}" radius="${steer_radius}"/>
         </geometry>
     </collision>
 
     <visual>
-        <xacro:insert_block name="tyre_origin"/>
+        <xacro:insert_block name="tire_origin"/>
         <geometry>
-            <cylinder length="${str_length}" radius="${str_radius}"/>
+            <cylinder length="${steer_length}" radius="${steer_radius}"/>
         </geometry>
     </visual>
 
