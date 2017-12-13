@@ -2,7 +2,11 @@
 <COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
   <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2017-11-27T18:06:50Z</created><keywords></keywords><modified>2017-11-27T18:06:50Z</modified><revision></revision><subject></subject><title></title><unit meter="0.025400" name="centimeter"></unit><up_axis>Y_UP</up_axis></asset>
   <library_images>
+<<<<<<< HEAD
+    <image id="Map #1-image" name="Map #1"><init_from>bulldogbolt.png</init_from></image>
+=======
     <image id="Map #1-image" name="Map #1"><init_from>file://CHEVY_BO.PNG</init_from></image>
+>>>>>>> 392b662d9e2527d674f22fc6910ae1a39eb32f01
   </library_images>
   <library_materials>
     <material id="Chevy_Bolt_2017" name="Chevy_Bolt_2017">

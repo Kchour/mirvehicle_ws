@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-
-<robot name="bulldogbolt" xmlns:xacro="http://www.ros.org/wiki/xacro" >
-  <xacro:include filename="$(find bulldogbolt_description)/urdf/bulldogbolt_structure.urdf.xacro" />
-</robot>

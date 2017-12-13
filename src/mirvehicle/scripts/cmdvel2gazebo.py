@@ -66,7 +66,7 @@ class cmdvel2gazebo:
 
         # car Wheelbase (in m)
         # simulator value matches the 'real' car
-        self.L = 2.62
+        self.L = 2.6 #2.62
 
         # car Tread
         # this value is from the car's manual
@@ -74,7 +74,7 @@ class cmdvel2gazebo:
 
         # car Tread
         # this value is from the simulator
-        self.T=1.301
+        self.T=1.501 #1.301
 
         # how many seconds delay for the dead man's switch
         # TODO: set timeout from launch file or rosparam
