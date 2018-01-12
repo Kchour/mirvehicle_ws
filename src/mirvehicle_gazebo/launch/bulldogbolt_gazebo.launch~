@@ -2,7 +2,7 @@
 
 <launch>
   
-<arg name="world" default="test_track"/>
+<arg name="world" default="neighborhood"/>
 
 <include file="$(find mirvehicle_gazebo)/launch/bulldogbolt_$(arg world).launch" />
 

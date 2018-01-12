@@ -185,6 +185,9 @@
     <child link="front_right_wheel_link"/>
     <origin xyz="0 ${-str_length/2 - tyre_length/2} 0" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
+    <dynamics damping="0.1"/>
+    <limit effort="10000" velocity="100" />
+    <joint_properties damping="0.0" friction="0.0" />
 </joint>
 
 <link name="front_right_wheel_link">
@@ -305,10 +308,10 @@
     <!--joint name="back_left_wheel_joint"-->
     <!-- FWD -->
     <joint name="front_left_wheel_joint">
-        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        <hardwareInterface>VelocityJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor1">
-        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        <hardwareInterface>VelocityJointInterface</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
     </actuator>
 </transmission>
@@ -319,10 +322,10 @@
     <!--joint name="back_right_wheel_joint"-->
     <!-- FWD -->
     <joint name="front_right_wheel_joint">
-        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        <hardwareInterface>VelocityJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor2">
-        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        <hardwareInterface>VelocityJointInterface</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
     </actuator>
 </transmission>
@@ -330,10 +333,10 @@
 <transmission name="rack_and_pinion_left">
     <type>transmission_interface/SimpleTransmission</type>
         <joint name="front_left_steering_joint">
-        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="eps_left">
-        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
     </actuator>
 </transmission>
@@ -341,10 +344,10 @@
 <transmission name="rack_and_pinion_right">
     <type>transmission_interface/SimpleTransmission</type>
         <joint name="front_right_steering_joint">
-        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="eps_right">
-        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
     </actuator>
 </transmission>

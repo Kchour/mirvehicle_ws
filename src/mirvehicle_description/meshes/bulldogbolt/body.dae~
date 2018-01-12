@@ -35,19 +35,19 @@
               <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
             </specular>
             <shininess>
-              <float sid="shininess">2.000000</float>
+              <float sid="shininess">3.000000</float>
             </shininess>
             <reflective>
-              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+              <color sid="reflective">1.000000  1.000000 1.000000 1.000000</color>
             </reflective>
             <reflectivity>
               <float sid="reflectivity">1.000000</float>
             </reflectivity>
             <transparent opaque="RGB_ZERO">
-              <color sid="transparent">1.00000  1.000000 1.00000 1.00000</color>
+              <color sid="transparent">0.200000  0.200000 0.200000 0.200000</color>
             </transparent>
             <transparency>
-              <float sid="transparency">0.000000</float>
+              <float sid="transparency">1.000000</float>
             </transparency>
           </phong>
         </technique>

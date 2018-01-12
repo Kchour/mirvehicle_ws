@@ -46,7 +46,7 @@ roslaunch catvehicle joystick.launch
 
 <launch>
 
-<arg name="robot_name" default="mirvehicle" />
+<arg name="robot_name" default="bulldogbolt" />
 
 <!-- include information for the joystick, etc. -->
 <node pkg="joy" type="joy_node" name="joy_node" output="screen"

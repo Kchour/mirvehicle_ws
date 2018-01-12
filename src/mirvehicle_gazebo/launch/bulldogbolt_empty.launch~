@@ -6,7 +6,7 @@
 <arg name="paused" default="false"/>
 <arg name="use_sim_time" default="true"/>
 <arg name="gui" default="false"/>
-<arg name="recording" default="false"/>
+<arg name="headless" default="false"/>
 <arg name="debug" default="false"/>
 
 <!-- change these defaults here, or as a cmd line arg, in order to turn off   -->
@@ -31,7 +31,7 @@
     <arg name="gui" value="$(arg gui)" />
     <arg name="paused" value="$(arg paused)"/>
     <arg name="use_sim_time" value="$(arg use_sim_time)"/>
-    <arg name="headless" value="$(arg recording)"/>
+    <arg name="recording" value="$(arg recording)"/>
 </include>
 
 <!-- ROBOT -->
