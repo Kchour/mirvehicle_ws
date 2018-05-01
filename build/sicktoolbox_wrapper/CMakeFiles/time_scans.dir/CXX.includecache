@@ -100,7 +100,7 @@ sicktoolbox/SickLMS2xx.hh
 ros/time.h
 /home/mir-lab/mirvehicle_ws/src/sicktoolbox_wrapper/standalone/ros/time.h
 
-/opt/ros/indigo/include/ros/duration.h
+/opt/ros/kinetic/include/ros/duration.h
 iostream
 -
 math.h
@@ -112,15 +112,15 @@ climits
 stdint.h
 -
 rostime_decl.h
-/opt/ros/indigo/include/ros/rostime_decl.h
+/opt/ros/kinetic/include/ros/rostime_decl.h
 
-/opt/ros/indigo/include/ros/exception.h
+/opt/ros/kinetic/include/ros/exception.h
 stdexcept
 -
 
-/opt/ros/indigo/include/ros/macros.h
+/opt/ros/kinetic/include/ros/macros.h
 
-/opt/ros/indigo/include/ros/platform.h
+/opt/ros/kinetic/include/ros/platform.h
 windows.h
 -
 stdlib.h
@@ -128,11 +128,11 @@ stdlib.h
 string
 -
 
-/opt/ros/indigo/include/ros/rostime_decl.h
+/opt/ros/kinetic/include/ros/rostime_decl.h
 ros/macros.h
 -
 
-/opt/ros/indigo/include/ros/time.h
+/opt/ros/kinetic/include/ros/time.h
 ros/platform.h
 -
 iostream
@@ -142,11 +142,11 @@ cmath
 ros/exception.h
 -
 duration.h
-/opt/ros/indigo/include/ros/duration.h
+/opt/ros/kinetic/include/ros/duration.h
 boost/math/special_functions/round.hpp
 -
 rostime_decl.h
-/opt/ros/indigo/include/ros/rostime_decl.h
+/opt/ros/kinetic/include/ros/rostime_decl.h
 sys/timeb.h
 -
 sys/time.h

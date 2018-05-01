@@ -2,7 +2,7 @@
 
 <launch>
   
-<arg name="world" default="neighborhood"/>
+<arg name="world" default="test_track"/>
 
 <include file="$(find mirvehicle_gazebo)/launch/bulldogbolt_$(arg world).launch" />
 
@@ -14,6 +14,8 @@
 <arg name="rvizconfig" default="$(find mirvehicle_gazebo)/launch/bulldogbolt_gazebo.rviz" />
 <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
 
-<include file="$(find mirvehicle_gazebo)/launch/joystick.launch" />
+<node name = "cmdvel2gazebo" pkg = "mirvehicle" type = "cmdvel2gazebo.py"/>
+
+<include file="$(find mirvehicle_gazebo)/launch/joystick.launch"/>
 
 </launch>

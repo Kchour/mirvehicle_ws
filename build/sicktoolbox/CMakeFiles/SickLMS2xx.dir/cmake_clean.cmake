@@ -1,4 +1,4 @@
-FILE(REMOVE_RECURSE
+file(REMOVE_RECURSE
   "CMakeFiles/SickLMS2xx.dir/c++/drivers/lms2xx/sicklms2xx/SickLMS2xx.cc.o"
   "CMakeFiles/SickLMS2xx.dir/c++/drivers/lms2xx/sicklms2xx/SickLMS2xxBufferMonitor.cc.o"
   "CMakeFiles/SickLMS2xx.dir/c++/drivers/lms2xx/sicklms2xx/SickLMS2xxMessage.cc.o"
@@ -7,6 +7,6 @@ FILE(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-FOREACH(lang CXX)
-  INCLUDE(CMakeFiles/SickLMS2xx.dir/cmake_clean_${lang}.cmake OPTIONAL)
-ENDFOREACH(lang)
+foreach(lang CXX)
+  include(CMakeFiles/SickLMS2xx.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

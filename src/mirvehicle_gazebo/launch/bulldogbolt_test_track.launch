@@ -40,7 +40,7 @@
     <!-- Spawn a robot into Gazebo -->
     <include file="$(find mirvehicle_gazebo)/launch/mirvehicle.launch">
         <arg name="robot_name" value="$(arg robot_name)"/>
-        <arg name="init_pose" value="-x 0 -y 0 -z 0"/>
+        <arg name="init_pose" value="-x -100 -y -100 -z 0"/>
         <arg name="config_file" value="$(arg robot_name)_control.yaml"/>
     </include>
 

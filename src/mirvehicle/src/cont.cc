@@ -62,7 +62,7 @@ namespace gazebo
             are factor of real time update rate specified in the gazebo. If they are not just print
             warning message and proceed gracefully
         */
-        physicsEngine = (this->world)->GetPhysicsEngine();
+        physicsEngine = (this->world)->Physics();
         //get the update rate from sdf
         if (_sdf->HasElement("updateRate"))
         {
@@ -160,14 +160,14 @@ namespace gazebo
         // JMS: output to give steering information
         geometry_msgs::Wrench steering_msg;
 
-        linear_vel = model->GetRelativeLinearVel();
-        angular_vel = model->GetRelativeAngularVel();
-        Vx = out_vel.linear.x = linear_vel.x;
-        Vy = out_vel.linear.y = linear_vel.y;
-        Vz = out_vel.linear.z = linear_vel.z;
-        out_vel.angular.x = angular_vel.x;
-        out_vel.angular.y = angular_vel.y;
-        out_vel.angular.z = angular_vel.z;
+        linear_vel = model->RelativeLinearVel();
+        angular_vel = model->RelativeAngularVel();
+        Vx = out_vel.linear.x = linear_vel.X();
+        Vy = out_vel.linear.y = linear_vel.Y();
+        Vz = out_vel.linear.z = linear_vel.Z();
+        out_vel.angular.x = angular_vel.X();
+        out_vel.angular.y = angular_vel.Y();
+        out_vel.angular.z = angular_vel.Z();
         V = sqrt(Vx*Vx + Vy*Vy + Vz*Vz);
 
 
@@ -183,8 +183,8 @@ namespace gazebo
         //physics::JointState j_state1 = new physics::JointState(steering_joints[1]);
 
         double a0,a1;
-        a0 = steering_joints[0]->GetAngle(0).Radian();
-        a1 = steering_joints[1]->GetAngle(0).Radian();
+        a0 = steering_joints[0]->Position(); //GetAngle(0).Radian();
+        a1 = steering_joints[1]->Position(); //GetAngle(0).Radian();
         // average these values, though in most modes they will be equal
 
         steering_msg.torque.z = (a0+a1)/2.0;

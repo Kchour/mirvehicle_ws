@@ -35,6 +35,7 @@
 
 import rospy
 from geometry_msgs.msg import Twist
+from std_msgs.msg import Float64
 import sys, getopt, curses
 
 class primitiveCmdVel:

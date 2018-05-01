@@ -4,10 +4,10 @@
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
-SUBDIRS(gtest)
-SUBDIRS(sicktoolbox)
-SUBDIRS(obstaclestopper)
-SUBDIRS(sicktoolbox_wrapper)
-SUBDIRS(mirvehicle)
-SUBDIRS(mirvehicle_description)
-SUBDIRS(mirvehicle_gazebo)
+subdirs(gtest)
+subdirs(sicktoolbox)
+subdirs(obstaclestopper)
+subdirs(sicktoolbox_wrapper)
+subdirs(mirvehicle)
+subdirs(mirvehicle_description)
+subdirs(mirvehicle_gazebo)

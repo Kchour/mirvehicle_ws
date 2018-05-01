@@ -2,6 +2,7 @@
 #include <gazebo/gazebo.hh>
 #include <gazebo/physics/physics.hh>
 #include <gazebo/common/common.hh>
+#include <ignition/math/Vector3.hh>
 #include <cstdio>
 #include "ros/ros.h"
 #include "geometry_msgs/Twist.h"
@@ -43,8 +44,8 @@ namespace gazebo
             ros::NodeHandle* rosnode_;
             
             //velocity vector to fetch velocity from model entity
-            math::Vector3 linear_vel;
-            math::Vector3 angular_vel;
+            ignition::math::Vector3d linear_vel;
+            ignition::math::Vector3d angular_vel;
             //Gazebo
             physics::JointPtr steering_joints[2];
             physics::JointController *j_cont;

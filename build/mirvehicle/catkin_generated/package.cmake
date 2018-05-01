@@ -10,4 +10,7 @@ set(mirvehicle_EXEC_DEPENDS "controller_manager" "gazebo_ros_control" "geometry_
 set(mirvehicle_RUN_DEPENDS "controller_manager" "gazebo_ros_control" "geometry_msgs" "position_controllers" "roscpp" "rospy" "sensor_msgs" "sicktoolbox" "sicktoolbox_wrapper" "std_msgs" "obstaclestopper" "tf" "transmission_interface" "velocity_controllers" "velodyne_pointcloud")
 set(mirvehicle_TEST_DEPENDS )
 set(mirvehicle_DOC_DEPENDS )
+set(mirvehicle_URL_WEBSITE "")
+set(mirvehicle_URL_BUGTRACKER "")
+set(mirvehicle_URL_REPOSITORY "")
 set(mirvehicle_DEPRECATED "")

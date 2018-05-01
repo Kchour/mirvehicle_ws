@@ -8,10 +8,8 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/mir-lab/mirvehicle_ws/devel:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/opt/ros/indigo/share/euslisp/jskeus/eus//Linux64/lib:/home/mir-lab/mirvehicle_ws/devel/lib:/home/mir-lab/mini_cooper_ws/devel/lib:/opt/ros/indigo/lib:/opt/ros/indigo/share/euslisp/jskeus/eus//Linux64/lib:/opt/ros/indigo/share/euslisp/jskeus/eus//Linux64/lib:/opt/ros/indigo/share/euslisp/jskeus/eus//Linux64/lib"
-export PATH="/opt/ros/indigo/share/euslisp/jskeus/eus//Linux64/bin:/opt/ros/indigo/bin:/opt/ros/indigo/share/euslisp/jskeus/eus//Linux64/bin:/opt/ros/indigo/share/euslisp/jskeus/eus//Linux64/bin:/opt/ros/indigo/share/euslisp/jskeus/eus//Linux64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export LD_LIBRARY_PATH="/home/mir-lab/mirvehicle_ws/devel/lib:$LD_LIBRARY_PATH"
 export PKG_CONFIG_PATH="/home/mir-lab/mirvehicle_ws/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
-export PWD="/home/mir-lab/mirvehicle_ws/build"
 export PYTHONPATH="/home/mir-lab/mirvehicle_ws/devel/lib/python2.7/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/mir-lab/mirvehicle_ws/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/jaerock/mirvehicle_ws/src:/home/mir-lab/mirvehicle_ws/src:$ROS_PACKAGE_PATH"
+export ROS_PACKAGE_PATH="/home/mir-lab/mirvehicle_ws/src:$ROS_PACKAGE_PATH"

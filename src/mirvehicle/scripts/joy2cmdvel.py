@@ -44,7 +44,7 @@ class joy2cmdvel:
         rospy.init_node('joy2cmdvel', anonymous=True)
 
         self.ns = rospy.get_param("~namespace", "mirvehicle")
-        self.velmax = rospy.get_param("~velmax",5)
+        self.velmax = rospy.get_param("~velmax",11)
 
         rospy.loginfo(rospy.get_caller_id() + " startup in namespace {0} with max velocity {1}".format(self.ns,self.velmax))
 

@@ -10,4 +10,7 @@ set(sicktoolbox_wrapper_EXEC_DEPENDS "roscpp" "rosconsole" "sensor_msgs" "sickto
 set(sicktoolbox_wrapper_RUN_DEPENDS "roscpp" "rosconsole" "sensor_msgs" "sicktoolbox" "diagnostic_updater")
 set(sicktoolbox_wrapper_TEST_DEPENDS )
 set(sicktoolbox_wrapper_DOC_DEPENDS )
+set(sicktoolbox_wrapper_URL_WEBSITE "http://ros.org/wiki/sicktoolbox_wrapper")
+set(sicktoolbox_wrapper_URL_BUGTRACKER "https://github.com/ros-drivers/sicktoolbox_wrapper/issues")
+set(sicktoolbox_wrapper_URL_REPOSITORY "https://github.com/ros-drivers/sicktoolbox_wrapper")
 set(sicktoolbox_wrapper_DEPRECATED "")
