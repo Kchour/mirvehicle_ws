@@ -1,6 +1,6 @@
 # mirvehicle_ws
 
-This MIR(Mobile Intelligent Robotics Lab) Vehicle workspace has been prepared to create a working environment for the Kettering University's Bulldog Bolt for SAE's AutoDrive Changllenge. 
+This MIR(Mobile Intelligent Robotics Lab) Vehicle workspace has been prepared to create a working environment for an autonomous vehicle.
 
 ## Contributors
 
